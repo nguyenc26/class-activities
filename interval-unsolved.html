@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+  </head>
+
+  <body>
+
+    <div id="show-number"></div>
+
+    <br>
+
+    <button id="stop">Stop</button>
+    <button id="resume">Resume</button>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+    <script type="text/javascript">
+
+    var number = 100;
+
+    var intervalId;
+
+    //=================
+    //this means you are declaring a function and then you call it later 
+    //$("#stop").on("click", function()
+    
+    //);
+    //run();
+    //================================
+
+    // $("#stop").on("click", stop());
+    //This will run whatever stop() function returns. 
+    //=================================================
+
+    //this allows you to name the function and you can run the function later on when you define it. 
+    $("#stop").on("click", stop);
+
+    $("#resume").on("click", run);
+
+    function run() {
+      //decrement is referencing the function at the bottom and doesnt actually do anyhting
+      intervalId = setInterval(decrement, 1000);
+    }
+
+    function decrement() {
+      //actually does the work 
+      number--;
+
+      $("#show-number").html("<h2>" + number + "</h2>");
+
+      if (number === 0) {
+
+        stop();
+
+        alert("Time Up!");
+      }
+    }
+
+    function stop() {
+
+      clearInterval(intervalId);
+    }
+
+    run();
+
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Content!</title>
+</head>
+
+<body>
+
+  <h1>Drink Selection!</h1>
+  <hr>
+
+  <!-- Here we create a generic drink-options div -->
+  <div id="drink-options"></div>
+
+  <script type="text/javascript">
+
+    // Array holds all of the drinks available
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+
+    // 1. Create code that "grabs" the div with the matching id (#drink-options);
+    // ...
+
+    var Div = document.getElementById("drink-options")
+
+    // ...
+
+
+    // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
+    // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
+    // ...
+  
+    //Loop making it go through the array 
+    for (var i=0; i<drinkList.length; i++) {
+      //creating a new div 
+      var NewDiv = document.createElement("div")
+      //targets the new div and then adding the text content to it which equals to the list that we set it to. 
+      // innderhtml allows you to add HTML things inside. with this tag you are able to add <br> and bold things like that but with textcontent it will render the tags as text. 
+      NewDiv.textContent = drinkList[i];
+      // Adding this to the parent div. 
+      Div.appendChild(NewDiv);
+    }
+
+    // ...
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic JavaScript Dump</title>
+  <style>
+    .steveGreen{
+      background-color: green;
+    }
+  </style>
+</head>
+  <body>
+
+    <!-- We created an empty HTML div. Note that there is no content inside. -->
+    <div id="empty-div"></div>
+
+    <script>
+      var targetDiv = document.getElementById("empty-div");
+
+      targetDiv.textContent = "Hello Friends!";
+
+      var newDiv = document.createElement("div");
+
+      newDiv.textContent = "It was nice to meet you";
+
+      newDiv.setAttribute('class','steveGreen')
+
+      targetDiv.appendChild(newDiv);
+
+    
+    </script>
+
+  </body>
+</html>
