@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fizzbuzz</title>
+
+</head>
+
+<body>
+
+  <!-- We created an empty HTML div. Note that there is no content inside. -->
+  <div id="empty-div"></div>
+
+  <script>
+    var numbers = [];
+
+    for (var i = 1; i <= 100; i++) {
+      numbers.push(i);
+      if (i % 3 === 0) {
+        numbers.push("fizz")
+        } else if (i % 5 === 0)
+        numbers.push("buzz")
+      }
+    console.log(numbers)    
+  </script>
+
+</body>
+
+</html>
